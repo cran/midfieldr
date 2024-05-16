@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -148,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 div.csl-bib-body { }
 div.csl-entry {
 clear: both;
+margin-bottom: 0em;
 }
 .hanging div.csl-entry {
 margin-left:2em;
@@ -441,7 +442,7 @@ and anonymized and curated by the MIDFIELD data steward.</p>
 within a field or a collection of fields within a Department, College,
 or University. Programs are denoted by the <em>Classification of
 Instructional Programs</em> (CIP), a taxonomy of academic programs
-curated by the US Department of Education <span class="citation">(<a href="#ref-NCES:2010" role="doc-biblioref">NCES 2010</a>)</span>.</p>
+curated by the US Department of Education <span class="citation">(<a href="#ref-NCES:2010">NCES 2010</a>)</span>.</p>
 </dd>
 <dt>metric</dt>
 <dd>
@@ -470,28 +471,28 @@ level, grades, etc.</p>
 <h2>Which records?</h2>
 <p>There are currently two points of access to MIDFIELD data:</p>
 <p><a href="https://midfield.online/">MIDFIELD</a>.   A database of
-anonymized student-level records for approximately 1.7M undergraduates
-at nineteen US institutions from 1987–2018, of which midfielddata
-provides a sample. This research database is currently accessible to
-MIDFIELD partner institutions only.</p>
+anonymized student-level records for approximately 2.4M undergraduates
+at 21 US institutions from 1987-2022. Access to this database requires a
+confidentiality agreement and Institutional Review Board (IRB) approval
+for human subjects research.</p>
 <p><a href="https://midfieldr.github.io/midfielddata/">midfielddata</a>.
   An R data package that supplies anonymized student-level records for
-98,000 undergraduates at three US institutions from 1988–2018. A sample
+98,000 undergraduates at three US institutions from 1988-2018. A sample
 of the MIDFIELD database, midfielddata provides practice data for the
 tools and methods in the midfieldr package.</p>
 <p><em>To load research data.</em>   For users with access to the
 MIDFIELD database, data are imported using any “read” function,
 e.g.,</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Not run</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>student <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_student_research_data&quot;</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>course <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_course_research_data&quot;</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>term <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_term_research_data&quot;</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>degree <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_degree_research_data&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Not run</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>student <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_student_research_data&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>course <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_course_research_data&quot;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>term <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_term_research_data&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>degree <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="st">&quot;local_path_to_degree_research_data&quot;</span>)</span></code></pre></div>
 <p><em>To load practice data.</em>   Load from the midfielddata
 package.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load practice data</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(midfielddata)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(student, course, term, degree)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># Load practice data</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">library</span>(midfielddata)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">data</span>(student, course, term, degree)</span></code></pre></div>
 <p>The variables in the practice data are a subset of those in the
 research data. A researcher transitioning from working with the practice
 data to the research data should find that their scripts need little (if
@@ -550,7 +551,7 @@ etc., can also be used for grouping and summarizing.</li>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-NCES:2010" class="csl-entry">
 NCES. 2010. <span>“<span class="nocase">IPEDS Classification of
 Instructional Programs (CIP)</span>.”</span> <span>National Center for

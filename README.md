@@ -8,12 +8,12 @@ studying undergraduate student-level records from the MIDFIELD database.
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/MIDFIELDR/midfieldr/workflows/R-CMD-check/badge.svg)](https://github.com/MIDFIELDR/midfieldr/actions)  
 [![CRAN
 status](https://www.r-pkg.org/badges/version/midfieldr)](https://CRAN.R-project.org/package=midfieldr)  
-[![codecov](https://codecov.io/gh/MIDFIELDR/midfieldr/branch/main/graph/badge.svg?token=KcuCzBkLBP)](https://app.codecov.io/gh/MIDFIELDR/midfieldr)
-
-<!-- [![CRAN check](https://badges.cranchecks.info/summary/midfieldr.svg)](https://cran.r-project.org/web/checks/check_results_midfieldr.html) -->
+[![R-CMD-check](https://github.com/MIDFIELDR/midfieldr/workflows/R-CMD-check/badge.svg)](https://github.com/MIDFIELDR/midfieldr/actions)  
+[![codecov](https://codecov.io/gh/MIDFIELDR/midfieldr/branch/main/graph/badge.svg?token=KcuCzBkLBP)](https://app.codecov.io/gh/MIDFIELDR/midfieldr)  
+[![status](https://tinyverse.netlify.app/badge/midfieldr)](https://CRAN.R-project.org/package=midfieldr)  
+[![downloads](http://cranlogs.r-pkg.org/badges/grand-total/midfieldr?color=blue)](https://cran.r-project.org/package=midfieldr)  
 <!-- badges: end -->
 
 ## Introduction
@@ -417,13 +417,13 @@ not research data.
 
 ## Installation
 
-Install with:
+Install from CRAN with:
 
 ``` r
 install.packages("midfieldr")
 ```
 
-Latest development version:
+Install latest development version from GitHub with:
 
 ``` r
 install.packages("pak")
@@ -431,7 +431,7 @@ pak::pkg_install("MIDFIELDR/midfieldr")
 ```
 
 midfieldr interacts with practice data provided in the midfielddata data
-package. Install midfielddata using:
+package. Install midfielddata from its repository with:
 
 ``` r
 install.packages("midfielddata",
@@ -446,36 +446,28 @@ takes some time.
 ## More information
 
 [MIDFIELD](https://midfield.online/).   A database of anonymized
-student-level records for approximately 1.7M undergraduates at nineteen
-US institutions from 1987–2018, of which midfielddata provides a sample.
-This research database is currently accessible to MIDFIELD partner
-institutions only.
+student-level records for approximately 2.4M undergraduates at 21 US
+institutions from 1987-2022. Access to this database requires a
+confidentiality agreement and Institutional Review Board (IRB) approval
+for human subjects research.
 
 [midfielddata](https://midfieldr.github.io/midfielddata/).   An R data
 package that supplies anonymized student-level records for 98,000
-undergraduates at three US institutions from 1988–2018. A sample of the
+undergraduates at three US institutions from 1988-2018. A sample of the
 MIDFIELD database, midfielddata provides practice data for the tools and
 methods in the midfieldr package.
 
-[MIDFIELD
-Institute](https://midfieldr.github.io/2023-midfield-institute/).  
-Materials from the 2023 workshop, including an introduction to R for
-beginners, chart basics with ggplot2, and data basics with data.table.
-
 ## Acknowledgments
 
-This work is supported by the US National Science Foundation through
+This work was supported by the US National Science Foundation through
 grant numbers 1545667 and 2142087.
 
 ## References
 
 <div id="refs">
-
-
-
-
-
-
+&#10;
+&#10;
+&#10;
 
 <style type="text/css">
 blockquote {
@@ -492,12 +484,13 @@ caption {
 }
 </style>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
 
 <div id="ref-Dowle+Srinivasan:2022:data.table" class="csl-entry">
 
-Dowle, Matt, and Arun Srinivasan. 2022. *<span
-class="nocase">d</span>ata.table: Extension of ‘Data.frame‘*.
+Dowle, Matt, and Arun Srinivasan. 2022.
+*<span class="nocase">d</span>ata.table: Extension of ‘Data.frame‘*.
 R package version 1.14.6.
 <https://CRAN.R-project.org/package=data.table>.
 
